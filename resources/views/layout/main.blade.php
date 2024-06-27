@@ -253,7 +253,7 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
-            <li class="nav-item nav-category">Main</li>
+            <li class="nav-item nav-category"></li>
             <li class="nav-item">
               <a class="nav-link" href="dashboard">
                 <span class="icon-bg"><i class="mdi mdi-cube menu-icon"></i></span>
@@ -268,6 +268,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="pasien">
+                <span class="icon-bg"><i class="mdi mdi-table-large menu-icon"></i></span>
+                <span class="menu-title">Pasien</span>
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="kunjungan">
                 <span class="icon-bg"><i class="mdi mdi-table-large menu-icon"></i></span>
                 <span class="menu-title">Kunjungan</span>
@@ -277,12 +283,6 @@
               <a class="nav-link" href="obat">
                 <span class="icon-bg"><i class="mdi mdi-table-large menu-icon"></i></span>
                 <span class="menu-title">Obat</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pasien">
-                <span class="icon-bg"><i class="mdi mdi-table-large menu-icon"></i></span>
-                <span class="menu-title">Pasien</span>
               </a>
             </li>
         </nav>

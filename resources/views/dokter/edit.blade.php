@@ -15,19 +15,23 @@
                     @method('Put')
                     @csrf
                     <div class="form-group">
-                      <label for="nama">Nama Dokter</label>
-                      <input type="text" class="form-control" name="nama" value="{{old('nama')}}">
+                      <label for="kode">Kode Dokter</label>
+                      <input type="text" class="form-control" name="kode" value="{{old('kode')}}">
                       @error('nama')
                             <span class="text-danger"> {{$message}} </span>
                       @enderror
                     </div>
                     <div class="form-group">
-                      <label for="no_hp">No Telephone Dokter</label>
-                      <input type="text" class="form-control" name="no_hp" value="{{old('no_hp')}}">
+                      <label for="nama">Nama Dokter</label>
+                      <input type="text" class="form-control" name="nama" value="{{old('nama')}}">
                     </div>
                     <div class="form-group">
                         <label for="spesialis">Specialis Dokter</label>
                         <input type="text" class="form-control" name="spesialis" value="{{old('spesialis')}}" placeholder="specialis saraf, specialis bedah, ....">
+                      </div>
+                      <div class="form-group">
+                        <label for="jadwal_praktek">Jadwal Praktek</label>
+                        <input type="text" class="form-control" name="jadwal_praktek" value="{{old('jadwal_praktek')}}" placeholder="specialis saraf, specialis bedah, ....">
                       </div>
                     <button type="submit" class="btn btn-primary mr-2">Simpan</button>
                     <a href="{{ url('dokter')}}" class="btn btn-light">Batal</button>

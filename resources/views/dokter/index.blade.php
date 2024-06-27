@@ -18,17 +18,21 @@
                     <table class="table">
                       <thead>
                         <tr>
+                          <th>Kode Dokter</th>
                           <th>Nama Dokter</th>
                           <th>No Telephone</th>
                           <th>Spesialis</th>
+                          <th>Jadwal Praktek</th>
                         </tr>
                       </thead>
                       <tbody>
                         @foreach ($dokter as $item)
                         <tr>
+                            <td>{{$item["kode"]}}</td>
                             <td>{{$item["nama"]}}</td>
                             <td>{{$item["no_hp"]}}</td>
                             <td>{{$item["spesialis"]}}</td>
+                            <td>{{$item["jadwal_praktek"]}}</td>
                             <td>
                               @can('delete',$item)
                               <form action="{{ route('dokter.destroy', $item["id"]) }}" method="post" style="display: inline">

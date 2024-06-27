@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('dokters', function (Blueprint $table) {
             $table->id();
-            $table->string('nama',45);
-            $table->string('no_hp',255);
-            $table->string('spesialis',25);
+            $table->string('kode',20);
+            $table->string('nama',20);
+            $table->string('spesialis',20);
+            $table->string('jadwal_praktek',20);
             $table->timestamps();
         });
     }

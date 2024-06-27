@@ -13,15 +13,12 @@ return new class extends Migration
     {
         Schema::create('pasiens', function (Blueprint $table) {
                 $table->id();
-                $table->string('nama');
-                $table->enum('kelamin', ['Laki-laki', 'Perempuan']);
-                $table->string('no_hp');
-                $table->date('tanggal_lahir');
-                $table->string('alamat');
-                $table->foreignId('dokter_id')->constrained('dokters')->onDelete('cascade');
-                $table->foreignId('kunjungan_id')->constrained('kunjungans')->onDelete('cascade');
-                $table->foreignId('obat_id')->constrained('obats')->onDelete('cascade');
-                $table->decimal('harga', 8, 2);
+                $table->string('no_urut',20);
+                $table->string('nama',20);
+                $table->enum('kelamin', ['Laki-laki', 'Perempuan'],20);
+                $table->string('no_hp',20);
+                $table->date('tanggal_lahir',20);
+                $table->string('alamat',20);
                 $table->timestamps();
             });
     }

@@ -28,15 +28,12 @@ class PasienController extends Controller
     public function store(Request $request)
     {
         $val = $request->validate([
+            'no_urut' => 'required',
             'nama' => 'required',
             'kelamin' => 'required',
             'no_hp' => 'required',
             'tanggal_lahir' => 'required',
             'alamat' => 'required',
-            'dokter_id' => 'required',
-            'kunjungan_id' => 'required',
-            'obat_id' => 'required',
-            'harga' => 'required|numeric',
         ]);
         pasien::create($val);
         return redirect()->route('pasien.index')->with('success', $val['nama'] . ' berhasil disimpan');
@@ -66,15 +63,12 @@ public function edit(pasien $pasien)
 public function update(Request $request, pasien $pasien)
 {
     $val = $request->validate([
+        'no_urut' => 'required',
         'nama' => 'required',
         'kelamin' => 'required',
         'no_hp' => 'required',
         'tanggal_lahir' => 'required',
         'alamat' => 'required',
-        'dokter_id' => 'required',
-        'kunjungan_id' => 'required',
-        'obat_id' => 'required',
-        'harga' => 'required|numeric',
     ]);
     pasien::where('id', $pasien['id'])->update($val);
     

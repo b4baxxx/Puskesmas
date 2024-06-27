@@ -14,19 +14,23 @@
                   <form method="POST"action="{{route('dokter.store')}}" class="forms-sample">
                     @csrf
                     <div class="form-group">
-                      <label for="nama">Nama Dokter</label>
-                      <input type="text" class="form-control" name="nama" value="{{old('nama')}}">
-                      @error('nama')
+                      <label for="kode">Kode Dokter</label>
+                      <input type="text" class="form-control" name="kode" value="{{old('kode')}}">
+                      @error('kode')
                             <span class="text-danger"> {{$message}} </span>
                       @enderror
                     </div>
                     <div class="form-group">
-                      <label for="no_hp">No Telephone Dokter</label>
-                      <input type="text" class="form-control" name="no_hp" value="{{old('no_hp')}}">
+                      <label for="nama">Nama</label>
+                      <input type="text" class="form-control" name="nama" value="{{old('nama')}}">
                     </div>
                     <div class="form-group">
                         <label for="spesialis">Specialis Dokter</label>
                         <input type="text" class="form-control" name="spesialis" value="{{old('spesialis')}}" placeholder="specialis saraf, specialis bedah, ....">
+                      </div>
+                      <div class="form-group">
+                        <label for="jadwal_praktek">Jadwal Praktek</label>
+                        <input type="text" class="form-control" name="jadwal_praktek" value="{{old('jadwal_praktek')}}">
                       </div>
                     <button type="submit" class="btn btn-primary mr-2">Simpan</button>
                     <a href="{{ url('dokter')}}" class="btn btn-light">Batal</button>

@@ -18,29 +18,27 @@
                     <table class="table">
                       <thead>
                         <tr>
+                          <th>No Urut</th>
                           <th>Nama Pasien</th>
                           <th>Kelamin</th>
-                          <th>No Telephone</th>
+                          <th>Nomor Hp</th>
                           <th>Tanggal Lahir</th>
                           <th>Alamat</th>
-                          <th>Dokter ID</th>
-                          <th>Kunjungan ID</th>
-                          <th>Obat ID</th>
-                          <th>Harga</th>
+                          <th>Nomor</th>
+                          
                         </tr>
                       </thead>
                       <tbody>
                         @foreach ($pasien as $item)
                         <tr>
+                            <td>{{$item["no_urut"]}}</td>
                             <td>{{$item["nama"]}}</td>
                             <td>{{$item["kelamin"]}}</td>
                             <td>{{$item["no_hp"]}}</td>
                             <td>{{$item["tanggal_lahir"]}}</td>
                             <td>{{$item["alamat"]}}</td>
-                            <td>{{$item["dokter"]["nama"]}}</td>
-                            <td>{{$item["kunjungan"]["tanggal_kunjungan"]}}</td>
-                            <td>{{$item["obat"]["nama_obat"]}}</td>
-                            <td>{{$item["harga"]}}</td>
+                            <td>{{$item["nomor"]}}</td>
+                           
                             <td>
                               @can('delete',$item)
                               <form action="{{ route('pasien.destroy', $item["id"]) }}" method="post" style="display: inline">

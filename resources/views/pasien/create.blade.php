@@ -13,77 +13,39 @@
                   <form method="POST"action="{{route('pasien.store')}}" class="forms-sample">
                     @csrf
                     <div class="form-group">
-                      <label for="nama">Nama Pasien</label>
+                      <label for="nama">No Urut</label>
                       <input type="text" class="form-control" name="nama" value="{{old('nama')}}">
                     </div>
                     <div class="form-group">
-                      <label for="kelamin">Jenis Kelamin</label>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="kelamin" id="kelaminL" value="Laki-laki" required>
-                        <label class="form-check-label" for="kelaminL">
-                            Laki-laki
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="kelamin" id="kelaminP" value="Perempuan" required>
-                        <label class="form-check-label" for="kelaminP">
-                            Perempuan
-                        </label>
+                      <label for="nama">Nama</label>
+                      <input type="text" class="form-control" name="nama" value="{{old('nama')}}">
+                    
                     </div>
                 </div>
                     </div>
                     <div class="form-group">
-                        <label for="no_hp">No Telephone Pasien</label>
-                        <input type="text" class="form-control" name="no_hp" value="{{old('no_hp')}}">
+                        <label for="kelamin">Kelamin</label>
+                        <input type="text" class="form-control" name="kelamin" value="{{old('kelamin')}}">
                       </div>
                       <div class="form-group">
-                        <label for="tanggal_lahir">Tanggal Lahir Pasien</label>
-                        <input type="date" class="form-control" name="tanggal_lahir" value="{{old('tanggal_lahir')}}">
+                        <label for="no_hp">Nomor Hp</label>
+                        <input type="date" class="form-control" name="no_hp" value="{{old('no_hp')}}">
                       </div>
                       <div class="form-group">
-                        <label for="alamat">Alamat Pasien</label>
+                        <label for="alamat">Alamat</label>
                         <input type="text" class="form-control" name="alamat" value="{{old('alamat')}}">
                       </div>    
+                    </div>
+                    <div class="form-group">
+                      <label for="tanggal_lahir">Tanggal Lahir</label>
+                      
+                        <input class="form-check-input" type="radio" name="tanggal_lahir" value="{{old('tanggal_lahir')}}">
+                        </label>
+                    </div>
                       <div class="form-group">
-                        <label for="dokter_id">Dokter_Id</label>
-                        <select name="dokter_id"
-                        class="form-control">
-                              @foreach($dokter as $item)
-                                  <option value="{{ $item['id']}}">
-                                      {{ $item['nama']}}
-                                  </option>
-                              @endforeach
-                        </select>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="kunjungan_id">Kunjungan_Id</label>
-                        <select name="kunjungan_id"
-                        class="form-control">
-                              @foreach($kunjungan as $item)
-                                  <option value="{{ $item['id']}}">
-                                      {{ $item['tanggal_kunjungan']}}
-                                  </option>
-                              @endforeach
-                        </select>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="obat_id">Obat_Id</label>
-                        <select name="obat_id"
-                        class="form-control">
-                              @foreach($obat as $item)
-                                  <option value="{{ $item['id']}}">
-                                      {{ $item['nama_obat']}}
-                                  </option>
-                              @endforeach
-                        </select>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="harga">Harga</label>
-                        <input type="number" class="form-control" name="harga" value="{{old('harga')}}">
-                      </div>
+                        <label for="nomor">Nomor</label>
+                        <input type="text" class="form-control" name="nomor" value="{{old('nomor')}}">
+                      </div>  
 
                     <button type="submit" class="btn btn-primary mr-2">Simpan</button>
                     <a href="{{ url('dokter')}}" class="btn btn-light">Batal</button>

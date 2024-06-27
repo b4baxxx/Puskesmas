@@ -23,11 +23,13 @@ class DokterController extends Controller
     }
 
     public function store(Request $request)
-    {
+    {   
         $val = $request->validate([
+            'kode' => 'required',
             'nama' => 'required',
-            'no_hp' => 'required',
             'spesialis' => 'required',
+            'jadwal_praktek' => 'required',
+            
         ]);
         dokter::create($val);
         return redirect()->route('dokter.index')->with('success', $val['nama'] . ' berhasil disimpan');
@@ -57,9 +59,10 @@ public function edit(dokter $dokter)
 public function update(Request $request, dokter $dokter)
 {
     $val = $request->validate([
-        'nama' => 'required',
-        'no_hp' => 'required',
-        'spesialis' => 'required',
+          'kode' => 'required',
+            'nama' => 'required',
+            'spesialis' => 'required',
+            'jadwal_praktek' => 'required',
     ]);
 
     

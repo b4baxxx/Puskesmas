@@ -14,11 +14,11 @@
                     @method('Put')
                     @csrf
                     <div class="form-group">
-                      <label for="nama">Nama Pasien</label>
-                      <input type="text" class="form-control" name="nama" value="{{old('nama')}}">
+                      <label for="no_urut">No_Urut</label>
+                      <input type="text" class="form-control" name="no_urut" value="{{old('no_urut')}}">
                     </div>
                     <div class="form-group">
-                      <label for="kelamin">Jenis Kelamin</label>
+                      <label for="kelamin">Nama</label>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="kelamin" id="kelaminL" value="Laki-laki" required>
                         <label class="form-check-label" for="kelaminL">
@@ -34,9 +34,26 @@
                 </div>
                     </div>
                     <div class="form-group">
-                        <label for="no_hp">No Telephone Pasien</label>
+                        <label for="no_hp">Nama</label>
                         <input type="text" class="form-control" name="no_hp" value="{{old('no_hp')}}">
                       </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="kelamin">Nama</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="kelamin" id="kelaminL" value="Laki-laki" required>
+                        <label class="form-check-label" for="kelaminL">
+                            Laki-laki
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="kelamin" id="kelaminP" value="Perempuan" required>
+                        <label class="form-check-label" for="kelaminP">
+                            Perempuan
+                        </label>
+                    </div>
+                </div>
+                    </div>
                       <div class="form-group">
                         <label for="tanggal_lahir">Tanggal Lahir Pasien</label>
                         <input type="date" class="form-control" name="tanggal_lahir" value="{{old('tanggal_lahir')}}">
