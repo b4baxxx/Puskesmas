@@ -34,6 +34,7 @@ class PasienController extends Controller
             'no_hp' => 'required',
             'tanggal_lahir' => 'required',
             'alamat' => 'required',
+            'obat_id' => 'required',
         ]);
         pasien::create($val);
         return redirect()->route('pasien.index')->with('success', $val['nama'] . ' berhasil disimpan');
@@ -69,6 +70,7 @@ public function update(Request $request, pasien $pasien)
         'no_hp' => 'required',
         'tanggal_lahir' => 'required',
         'alamat' => 'required',
+        'obat_id' => 'required',
     ]);
     pasien::where('id', $pasien['id'])->update($val);
     

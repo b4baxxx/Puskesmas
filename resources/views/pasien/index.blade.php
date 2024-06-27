@@ -24,7 +24,7 @@
                           <th>Nomor Hp</th>
                           <th>Tanggal Lahir</th>
                           <th>Alamat</th>
-                          <th>Nomor</th>
+                         
                           
                         </tr>
                       </thead>
@@ -37,7 +37,7 @@
                             <td>{{$item["no_hp"]}}</td>
                             <td>{{$item["tanggal_lahir"]}}</td>
                             <td>{{$item["alamat"]}}</td>
-                            <td>{{$item["nomor"]}}</td>
+                            <td>{{$item["obat_id  "]}}</td>
                            
                             <td>
                               @can('delete',$item)

@@ -15,10 +15,11 @@ return new class extends Migration
                 $table->id();
                 $table->string('no_urut',20);
                 $table->string('nama',20);
-                $table->enum('kelamin', ['Laki-laki', 'Perempuan'],20);
+                $table->string('kelamin',20);
                 $table->string('no_hp',20);
                 $table->date('tanggal_lahir',20);
                 $table->string('alamat',20);
+                $table->string('obat_id',20);
                 $table->timestamps();
             });
     }
