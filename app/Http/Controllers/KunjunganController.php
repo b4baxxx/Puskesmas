@@ -27,7 +27,7 @@ class KunjunganController extends Controller
             'tanggal_kunjungan' => 'required|date',
             'keluhan' => 'required',
             'diagnosa' => 'required',
-            'no_urut' => 'required|integer',
+            'no_urut' => 'required',
         ]);
         kunjungan::create($val);
         return redirect()->route('kunjungan.index')->with('success', $val['no_urut'] . ' berhasil disimpan');
