@@ -22,18 +22,24 @@ class PasienController extends Controller
         $dokter = dokter::all();
         $kunjungan = kunjungan::all();
         $obat = obat::all();
-        return view('pasien.create', compact('dokter', 'kunjungan', 'obat'));
+        return view('pasien.create', compact('id_pasien', 'id_dokter','no_urut','nama','usia','tanggal_kunjungan','kelamin','nomor_hp','keluhan','nama_obat','harga'));
     }
 
     public function store(Request $request)
     {
         $val = $request->validate([
         'id_pasien' => 'required',
+        'id_dokter' => 'required',
+        'no_urut'  => 'required',
         'nama' => 'required',
         'usia' => 'required',
+        'tanggal_kunjungan' => 'required',
         'kelamin' => 'required',
-        'nomor_hp' => 'required',
-        'dokter_id' => 'required',
+        'no_hp'  => 'required',
+        'keluhan'  => 'required',
+        'nama_obat'  => 'required',
+        'harga'  => 'required|numeric',
+
         
         ]);
         pasien::create($val);
@@ -65,12 +71,18 @@ public function update(Request $request, pasien $pasien)
 {
     $val = $request->validate([
         'id_pasien' => 'required',
+        'id_dokter' => 'required',
+        'no_urut'  => 'required',
         'nama' => 'required',
         'usia' => 'required',
+        'tanggal_kunjungan' => 'required',
         'kelamin' => 'required',
-        'nomor_hp' => 'required',
-        'dokter_id' => 'required',
-        
+        'no_hp'  => 'required',
+        'keluhan'  => 'required',
+        'nama_obat'  => 'required',
+        'harga'  => 'required',
+
+
     ]);
     pasien::where('id', $pasien['id'])->update($val);
     

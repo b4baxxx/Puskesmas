@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class kunjungan extends Model
 {
     use HasFactory;
-    
-    protected $fillable = ['tanggal_kunjungan', 'keluhan', 'diagnosa', 'no_urut'];
+    protected $fillable = ['id_pasien','id_dokter','no_urut','nama','no_urut','tanggal_kunjungan','keluhan','diagnosa','nama_obat',];
+    protected $table = 'kunjungans';
+    protected $primaryKey = 'id_pasien';
+    protected $guarded = [];
 
-    public function pasiens(){
-        return $this->belongsTo(pasien::class, 'kunjungan_id');
     }
-}
+

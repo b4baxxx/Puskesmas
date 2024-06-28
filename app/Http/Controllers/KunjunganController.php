@@ -24,10 +24,14 @@ class KunjunganController extends Controller
     public function store(Request $request)
     {
         $val = $request->validate([
+            'id_pasien' => 'required',
+            'id_dokter' => 'required',
+            'no_urut' => 'required',
             'tanggal_kunjungan' => 'required|date',
             'keluhan' => 'required',
             'diagnosa' => 'required',
-            'no_urut' => 'required',
+            'nama_obat' => 'required',
+           
         ]);
         kunjungan::create($val);
         return redirect()->route('kunjungan.index')->with('success', $val['no_urut'] . ' berhasil disimpan');
@@ -56,10 +60,14 @@ public function edit(kunjungan $kunjungan)
 public function update(Request $request, kunjungan $kunjungan)
 {
     $val = $request->validate([
+        'id_pasien' => 'required',
+        'id_dokter' => 'required',
+        'no_urut' => 'required',
         'tanggal_kunjungan' => 'required|date',
         'keluhan' => 'required',
         'diagnosa' => 'required',
-        'no_urut' => 'required|integer',
+        'nama_obat' => 'required',
+       
     ]);
     
     kunjungan::where('id', $kunjungan['id'])->update($val);
