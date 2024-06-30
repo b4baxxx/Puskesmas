@@ -12,7 +12,8 @@ class pasien extends Model
     protected $table = 'pasiens';
     protected $primaryKey = 'id_pasien';
     protected $guarded = [];
-
+    public $incrementing = false; 
+    protected $keyType = 'string';
     // public function dokter(){
     //     return $this->belongsTo(dokter::class, 'dokter_id');
     // }

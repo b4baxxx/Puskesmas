@@ -48,16 +48,16 @@
                             
                             <td>
                               @can('delete',$item)
-                              <form action="{{ route('pasien.destroy', $item["id"]) }}" method="post" style="display: inline">
+                              <form action="{{ route('pasien.destroy', $item->id_pasien) }}" method="post" style="display: inline">
                                 @method('DELETE')
                                 @csrf
-                                <button type="submit" class="btn btn-sm btn-rounded btn-danger show_confirm" data-name="{{ $item["nama"]}}">Hapus</button>
+                                <button type="submit" class="btn btn-sm btn-rounded btn-danger show_confirm" data-name="{{ $item->nama}}">Hapus</button>
                               </form>
                               @endcan
                             </td>
                             <td>
                               @can('update',$item)
-                              <a href="{{ route('pasien.edit', $item["id"])}}"
+                              <a href="{{ route('pasien.edit', $item->id_pasien)}}"
                                 class="btn btn-sm btn-rounded btn-warning">Edit</a>
                                 @endcan
                               </td>

@@ -26,6 +26,10 @@
                         <input type="text" class="form-control" name="no_urut" value="{{old('no_urut')}}">
                       </div>
                       <div class="form-group">
+                        <label for="tanggal_kunjungan">Tanggal Kunjungan</label>
+                        <input type="date" class="form-control" name="tanggal_kunjungan" value="{{ old('tanggal_kunjungan') }}" required>
+                    </div>
+                      <div class="form-group">
                         <label for="keluhan">Keluhan</label>
                         <input type="text" class="form-control" name="keluhan" value="{{old('keluhan')}}">
                       </div>
