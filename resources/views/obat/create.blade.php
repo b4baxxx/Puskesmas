@@ -8,9 +8,8 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Tambah Obat</h4>
-                  <p class="card-description">
-                    Data Tambah Obat
-                  <form method="POST"action="{{route('obat.store')}}" class="forms-sample">
+                  <p class="card-description">Data Tambah Obat</p>
+                    <form action="{{ route('obat.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
                       <label for="nama_obat">Nama Obat</label>
@@ -23,16 +22,16 @@
                     <div class="form-group">
                         <label for="stok">Stok Obat</label>
                         <input type="text" class="form-control" name="stok" value="{{old('stok')}}">
-                      </div>
+                    </div>
                       <div class="form-group">
                         <label for="dosis">Dosis Obat</label>
                         <input type="text" class="form-control" name="dosis" value="{{old('dosis')}}">
                       </div>
                     <button type="submit" class="btn btn-primary mr-2">Simpan</button>
-                    <a href="{{ url('dokter')}}" class="btn btn-light">Batal</button>
+                    <a href="{{ url('obat')}}" class="btn btn-light">Batal</a>
                   </form>
-                </div>
-              </div>
             </div>
+        </div>
+    </div>
 </div>
 @endsection

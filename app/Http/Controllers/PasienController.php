@@ -22,7 +22,7 @@ class PasienController extends Controller
         $dokter = dokter::all();
         $kunjungan = kunjungan::all();
         $obat = obat::all();
-        return view('pasien.create', compact('id_pasien', 'id_dokter','no_urut','nama','usia','tanggal_kunjungan','kelamin','nomor_hp','keluhan','nama_obat','harga'));
+        return view('pasien.create', compact('dokter', 'kunjungan', 'obat'));
     }
 
     public function store(Request $request)
@@ -33,9 +33,9 @@ class PasienController extends Controller
         'no_urut'  => 'required',
         'nama' => 'required',
         'usia' => 'required',
-        'tanggal_kunjungan' => 'required',
+        'tanggal_kunjungan' => 'required|date',
         'kelamin' => 'required',
-        'no_hp'  => 'required',
+        'nomor_hp'  => 'required',
         'keluhan'  => 'required',
         'nama_obat'  => 'required',
         'harga'  => 'required|numeric',
@@ -84,7 +84,7 @@ public function update(Request $request, pasien $pasien)
 
 
     ]);
-    pasien::where('id', $pasien['id'])->update($val);
+    pasien::where('id', $pasien->id)->update($val);
     
     return redirect()->route('pasien.index')->with('Success', $val['nama'] . ' berhasil disimpan');
 }
