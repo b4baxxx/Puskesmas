@@ -9,12 +9,14 @@ use Illuminate\Support\Facades\DB;
 class DashboardController extends Controller
 {
     public function index(){
-        $jumlah_obat = obat::count();
-        $pasienobat = array($jumlah_obat);
-        $namaobat = obat::select('nama_obat')->get();
-        // $pasienobat= obat::select(" SELECT obats.nama_obat,COUNT(*) as jumlah FROM obats
-        // GROUP BY obats.nama_obat");
-        return view('dashboard')->with('pasienobat',$pasienobat)->with('namaobat',$namaobat);
+        // $data = DB::table('pasiens')
+        //     ->select('nama_obat', DB::raw('count(*) as jumlah'))
+        //     ->groupBy('nama_obat')
+        //     ->get();
+        $data = Obat::select('nama_obat', 'stok')->get();
+            return view('dashboard', [
+                'data' => $data
+            ]);
         
     }
 }
