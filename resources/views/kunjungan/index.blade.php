@@ -33,6 +33,7 @@
                             <td>{{$item["id_pasien"]}}</td>
                             <td>{{$item["id_dokter"]}}</td>
                             <td>{{$item["no_urut"]}}</td>
+                            <td>{{$item["tanggal_kunjungan"]}}</td>
                             <td>{{$item["keluhan"]}}</td>
                             <td>{{$item["diagnosa"]}}</td>
                             <td>{{$item["nama_obat"]}}</td>

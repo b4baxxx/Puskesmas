@@ -77,7 +77,7 @@ public function update(Request $request, pasien $pasien)
         'usia' => 'required',
         'tanggal_kunjungan' => 'required',
         'kelamin' => 'required',
-        'no_hp'  => 'required',
+        'nomor_hp'  => 'required',
         'keluhan'  => 'required',
         'nama_obat'  => 'required',
         'harga'  => 'required',

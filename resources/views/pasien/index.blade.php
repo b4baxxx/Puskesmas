@@ -39,9 +39,8 @@
                             <td>{{$item["no_urut"]}}</td>
                             <td>{{$item["nama"]}}</td>
                             <td>{{$item["usia"]}}</td>
-                            <td>{{$item["tanggal_kunjungan"]}}</td>
                             <td>{{$item["kelamin"]}}</td>
-                            <td>{{$item["no_hp"]}}</td>
+                            <td>{{$item["nomor_hp"]}}</td>
                             <td>{{$item["keluhan"]}}</td>
                             <td>{{$item["nama_obat"]}}</td>
                             <td>{{$item["harga"]}}</td>
