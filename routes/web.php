@@ -24,6 +24,7 @@ route::resource('kunjungan',KunjunganController::class);
 route::resource('obat',ObatController::class);
 
 
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

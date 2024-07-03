@@ -18,7 +18,7 @@ return new class extends Migration
                 $table->integer('no_urut');
                 $table->string('nama');
                 $table->string('usia');
-                $table->date('tanggal_kunjungan');
+                $table->date('tanggal_kunjungan')->nullable()->change();
                 $table->enum('kelamin', ['Laki-laki', 'Perempuan']);
                 $table->string('nomor_hp');
                 $table->string('keluhan');
