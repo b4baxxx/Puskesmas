@@ -39,21 +39,54 @@
                             <td>
                             <td>
                               @can('delete',$item)
-                              <form action="{{ route('kunjungan.destroy', $item["id"]) }}" method="post" style="display: inline">
+                              <form action="{{ route('kunjungan.destroy', $item->id_pasien) }}" method="post" style="display: inline">
                                 @method('DELETE')
                                 @csrf
-                                <button type="submit" class="btn btn-sm btn-rounded btn-danger show_confirm" data-name="{{ $item["tanggal_kunjungan"]}}">Hapus</button>
+                                <button type="submit" class="btn btn-sm btn-rounded btn-danger show_confirm" data-name="{{ $item->tanggal_kunjungan}}">Hapus</button>
                               </form>
                               @endcan
                             </td>
                             <td>
                               @can('update',$item)
-                              <a href="{{ route('kunjungan.edit', $item["id"])}}"
+                              <a href="{{ route('kunjungan.edit', $item->id_pasien)}}"
                                 class="btn btn-sm btn-rounded btn-warning">Edit</a>
                                 @endcan
                               </td>
                             </tr>
                         @endforeach
+                        @if (session('success'))
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+           Swal.fire({
+              title: "Good job!",
+              text: "{{ session('success') }}",
+              icon: "success"
+            });
+        </script>
+        @endif
+          {{-- confirm dialog --}}
+        <script type="text/javascript">
+          $('.show_confirm').click(function(event) {
+            let form =  $(this).closest("form");
+            let name = $(this).data("name");
+            event.preventDefault();
+            Swal.fire({
+              title: "Yakin Dekk?"+name,
+              text: "Setelah dihapus tidak bisa dikembalikan",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Ya, Hapus"
+            })
+          
+            .then((willDelete) => {
+              if (willDelete.isConfirmed) {
+                form.submit();
+              }
+            });
+          });
+        </script>
                       </tbody>
                     </table>
                   </div>
