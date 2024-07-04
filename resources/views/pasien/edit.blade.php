@@ -10,12 +10,12 @@
                   <h4 class="card-title">Ubah Pasien</h4>
                   <p class="card-description">
                     Data Ubah Pasien
-                  <form method="POST"action="{{route('pasien.update', $pasien["id"])}}" class="forms-sample">
-                    @method('Put')
+                  <form method="POST" action="{{route('pasien.update', $pasien["id_pasien"])}}" class="forms-sample">
+                    @method('PUT')
                     @csrf
                     <div class="form-group">
                       <label for="id_pasien">Id Pasien</label>
-                      <input type="text" class="form-control" name="id_pasien" value="{{old('id_pasien')}}">
+                      <input type="text" class="form-control" name="id_pasien" value="{{old('id_pasien') ? old('id_pasien') : $pasien['id_pasien']}}">
                     </div>
                     <div class="form-group">
                       <label for="id_dokter">Id Dokter</label>

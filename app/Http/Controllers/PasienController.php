@@ -59,6 +59,7 @@ class PasienController extends Controller
  */
 public function edit(pasien $pasien)
 {
+    // dd($pasien);
     // $pasien=pasien::all();
     return view('pasien.edit')
     ->with('pasien',$pasien);

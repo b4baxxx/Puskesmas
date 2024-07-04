@@ -69,7 +69,6 @@ public function update(Request $request, kunjungan $kunjungan)
         'nama_obat' => 'required',
        
     ]);
-    
     kunjungan::where('id', $kunjungan['id'])->update($val);
     return redirect()->route('kunjungan.index')->with('Success', $val['tanggal_kunjungan'] . ' berhasil disimpan');
 }

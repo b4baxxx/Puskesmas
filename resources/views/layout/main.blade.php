@@ -262,7 +262,7 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="dokter">
+              <a class="nav-link" href="{{ url('dokter') }}">
                 <span class="icon-bg"><i class="mdi mdi-chart-bar menu-icon"></i></span>
                 <span class="menu-title">Dokter</span>
               </a>
