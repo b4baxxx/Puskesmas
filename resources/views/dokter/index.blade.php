@@ -20,7 +20,6 @@
                         <tr>
                           <th>Kode Dokter</th>
                           <th>Nama Dokter</th>
-                          <th>No Telepon</th>
                           <th>Spesialis</th>
                           <th>Jadwal Praktek</th>
                         </tr>
