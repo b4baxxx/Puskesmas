@@ -19,7 +19,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="nama">Nama</label>
+                        <label for="nama">Nama dokter</label>
                         <input type="text" class="form-control" id="nama" name="nama" value="{{ old('nama') }}">
                     </div>
                     <div class="form-group">

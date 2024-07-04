@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-group">
                       <label for="nama">Nama Dokter</label>
-                      <input type="text" class="form-control" name="nama" value="{{old('nama')}}">
+                      <input type="text" class="form-control" name="nama" value="{{old('nama')}}" placeholder="isi nama dokter, ....">
                     </div>
                     <div class="form-group">
                         <label for="spesialis">Specialis Dokter</label>

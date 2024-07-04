@@ -20,7 +20,7 @@
                         <tr>
                           <th>Kode Dokter</th>
                           <th>Nama Dokter</th>
-                          <th>No Telephone</th>
+                          <th>No Telepon</th>
                           <th>Spesialis</th>
                           <th>Jadwal Praktek</th>
                         </tr>
@@ -30,7 +30,6 @@
                         <tr>
                             <td>{{$item["kode"]}}</td>
                             <td>{{$item["nama"]}}</td>
-                            <td>{{$item["no_hp"]}}</td>
                             <td>{{$item["spesialis"]}}</td>
                             <td>{{$item["jadwal_praktek"]}}</td>
                             <td>
