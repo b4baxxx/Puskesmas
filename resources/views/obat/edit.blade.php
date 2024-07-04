@@ -9,7 +9,8 @@
                 <div class="card-body">
                   <h4 class="card-title">Tambah Obat</h4>
                   <p class="card-description">
-                    Data Tambah Obat
+                    Data Tambah Obat 
+                    
                   <form method="POST"action="{{route('obat.update', $obat["id"])}}" class="forms-sample">
                     @method('Put')
                     @csrf

@@ -9,7 +9,7 @@
                 <div class="card-body">
                   <h4 class="card-title">Ubah Pasien</h4>
                   <p class="card-description">
-                    Data Ubah Pasien
+                    Data Ubah Pasien </p>
                   <form method="POST" action="{{route('pasien.update', $pasien["id_pasien"])}}" class="forms-sample">
                     @method('PUT')
                     @csrf
@@ -19,7 +19,7 @@
                     </div>
                     <div class="form-group">
                       <label for="id_dokter">Id Dokter</label>
-                      <input type="text" class="form-control" name="id_dokter" value="{{old('id_dokter')}}">
+                      <input type="text" class="form-control" name="id_dokter" value="{{old('id_dokter')? old('id_dokter') : $pasien['id_dokter']}}">
                     </div>
                     <div class="form-group">
                       <label for="no_urut">No Urut</label>
@@ -73,3 +73,4 @@
             </div>
 </div>
 @endsection
+

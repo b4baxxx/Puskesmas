@@ -12,7 +12,7 @@
                     Data Ubah Dokter
                   </p>
                   <form method="POST"action="{{route('dokter.update', $dokter["id"])}}" class="forms-sample">
-                    @method('Put')
+                    @method('PUT')
                     @csrf
                     <div class="form-group">
                       <label for="kode">Kode Dokter</label>
