@@ -23,15 +23,15 @@
                     </div>
                     <div class="form-group">
                       <label for="nama">Nama Dokter</label>
-                      <input type="text" class="form-control" name="nama" value="{{old('nama')}}" placeholder="isi nama dokter, ....">
+                      <input type="text" class="form-control" name="nama" value="{{old('nama') ? old('nama') : $dokter['nama']}}" placeholder="isi nama dokter, ....">
                     </div>
                     <div class="form-group">
                         <label for="spesialis">Specialis Dokter</label>
-                        <input type="text" class="form-control" name="spesialis" value="{{old('spesialis')}}" placeholder="specialis saraf, specialis bedah, ....">
+                        <input type="text" class="form-control" name="spesialis" value="{{old('spesialis') ? old('spesialis') : $dokter['spesialis']}}" placeholder="specialis saraf, specialis bedah, ....">
                       </div>
                       <div class="form-group">
                         <label for="jadwal_praktek">Jadwal Praktek</label>
-                        <input type="text" class="form-control" name="jadwal_praktek" value="{{old('jadwal_praktek')}}" placeholder="specialis saraf, specialis bedah, ....">
+                        <input type="text" class="form-control" name="jadwal_praktek" value="{{old('jadwal_praktek') ? old('jadwal_praktek') : $dokter['jadwal_praktek']}}" placeholder="specialis saraf, specialis bedah, ....">
                       </div>
                     <button type="submit" class="btn btn-primary mr-2">Simpan</button>
                     <a href="{{ url('dokter')}}" class="btn btn-light">Batal</button>
